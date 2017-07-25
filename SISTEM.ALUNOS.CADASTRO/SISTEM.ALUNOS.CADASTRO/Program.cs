@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,18 @@ namespace SISTEM.ALUNOS.CADASTRO
         [STAThread]
         static void Main()
         {
+            try
+            {
+                Connection.Active(true);
+            }
+            catch (Exception Erro)
+            {
+                MessageBox.Show(Erro.Message);
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
+            Connection.Active(false);
         }
     }
 }

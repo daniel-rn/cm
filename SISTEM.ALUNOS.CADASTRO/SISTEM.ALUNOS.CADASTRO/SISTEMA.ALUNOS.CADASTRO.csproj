@@ -86,6 +86,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\SISTEMA.ALUNOS.BIBLIOTECA.csproj">
+      <Project>{F380E878-D423-4921-9E65-1EB7BD32E27A}</Project>
+      <Name>SISTEMA.ALUNOS.BIBLIOTECA</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
