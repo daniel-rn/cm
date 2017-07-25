@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirebirdSql.Data.FirebirdClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    class Aluno
+    public class Aluno
     {
-#
+        #region "Atributos"
         private string _nome
         {
             get
@@ -41,6 +42,16 @@ namespace ClassLibrary1
             {
                 _email = value;
             }
+        }
+        #endregion
+
+        //metodos
+        public FbDataReader Open(FbConnection _conn)
+        {
+            FbCommand cmd = new FbCommand();
+            cmd.Connection = _conn;
+            cmd.CommandText = "select * from alunos";
+            return cmd.ExecuteReader();
         }
     }
 }
