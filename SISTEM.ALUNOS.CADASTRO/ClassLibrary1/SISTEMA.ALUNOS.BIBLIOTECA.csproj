@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FirebirdSql.Data.FirebirdClient">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2017\Projects\SISTEMA.CAD.ALUNOS\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <HintPath>..\..\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
