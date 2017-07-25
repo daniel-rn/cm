@@ -36,6 +36,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbNome
@@ -88,11 +89,22 @@
             this.txtTelefone.TabIndex = 6;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(332, 215);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(126, 39);
+            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 365);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

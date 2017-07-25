@@ -18,6 +18,7 @@ namespace SISTEM.ALUNOS.CADASTRO
             try
             {
                 Connection.Active(true);
+                MessageBox.Show("Sucesso na conexão !!");
             }
             catch (Exception Erro)
             {
