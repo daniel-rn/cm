@@ -19,9 +19,14 @@ namespace SISTEM.ALUNOS.CADASTRO
         public TelaExibeCadastros()
         {
             InitializeComponent();
-        }
 
-        private void TelaExibeCadastros_Load(object sender,EventArgs e)
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime agora = DateTime.Now;
+            lbData.Text ="Data: "+agora.ToShortDateString()+" Hora: "+agora.ToLongTimeString();
+        }
+        private void atualizaTable()
         {
             try
             {
@@ -38,6 +43,11 @@ namespace SISTEM.ALUNOS.CADASTRO
                 MessageBox.Show(err.Message);
             }
         }
-       
+
+        private void TelaExibeCadastros_Load(object sender, EventArgs e)
+        {
+            atualizaTable();
+            timer1_Tick(e,e);
+        }
     }
 }

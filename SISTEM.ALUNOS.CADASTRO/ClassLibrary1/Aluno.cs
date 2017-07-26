@@ -50,7 +50,7 @@ namespace ClassLibrary1
         {
             FbCommand cmd = new FbCommand();
             cmd.Connection = _conn;
-            cmd.CommandText = "select * from alunos";
+            cmd.CommandText = "select * from aluno";
             return cmd.ExecuteReader();
         }
     }

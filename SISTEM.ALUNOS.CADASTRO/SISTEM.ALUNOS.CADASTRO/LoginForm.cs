@@ -19,7 +19,8 @@ namespace SISTEM.ALUNOS.CADASTRO
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-
+            Form forTela = new TelaExibeCadastros();
+            forTela.Show();
         }
     }
 }
