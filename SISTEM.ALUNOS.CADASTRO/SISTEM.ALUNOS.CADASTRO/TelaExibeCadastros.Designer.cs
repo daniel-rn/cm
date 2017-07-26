@@ -63,10 +63,12 @@
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(12, 56);
+            this.grid.Location = new System.Drawing.Point(3, 56);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(743, 212);
+            this.grid.Size = new System.Drawing.Size(752, 299);
             this.grid.TabIndex = 0;
             // 
             // panel2

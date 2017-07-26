@@ -21,6 +21,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             Form forTela = new TelaExibeCadastros();
             forTela.Show();
+            new TelaCadastro().Show();
         }
     }
 }

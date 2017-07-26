@@ -10,39 +10,12 @@ namespace ClassLibrary1
     public class Aluno
     {
         #region "Atributos"
-        private string _nome
-        {
-            get
-            {
-                return _nome;
-            }
-            set
-            {
-                _nome = value;
-            }
-        }
-        private string _telefone
-        {
-            get
-            {
-                return _telefone;
-            }
-            set
-            {
-                _telefone = value;
-            }
-        }
-        private string _email
-        {
-            get
-            {
-                return _email;
-            }
-            set
-            {
-                _email = value;
-            }
-        }
+        public string _nome;
+
+        public string _telefone;
+
+        public string _email;
+        
         #endregion
 
         //metodos

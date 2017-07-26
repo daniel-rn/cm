@@ -33,8 +33,8 @@
             this.lbNome = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,19 +66,19 @@
             this.lbTelefone.TabIndex = 2;
             this.lbTelefone.Text = "Telefone";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNome.Location = new System.Drawing.Point(50, 76);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(187, 20);
+            this.txtNome.TabIndex = 3;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(50, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(50, 124);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 5;
             // 
             // txtTelefone
             // 
@@ -106,8 +106,8 @@
             this.ClientSize = new System.Drawing.Size(527, 365);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lbTelefone);
             this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.lbNome);
@@ -124,8 +124,8 @@
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbTelefone;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.Button btnSalvar;
     }
