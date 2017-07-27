@@ -25,6 +25,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             DateTime agora = DateTime.Now;
             lbData.Text ="Data: "+agora.ToShortDateString()+" Hora: "+agora.ToLongTimeString();
+            atualizaTable();
         }
         private void atualizaTable()
         {

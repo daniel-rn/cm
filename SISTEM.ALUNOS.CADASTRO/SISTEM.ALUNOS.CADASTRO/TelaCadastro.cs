@@ -18,14 +18,14 @@ namespace SISTEM.ALUNOS.CADASTRO
         public TelaCadastro()
         {
             InitializeComponent();
-            alDAO = new AlunoDAO();
-            al = new Aluno();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-  
+
+            alDAO = new AlunoDAO();
+            al = new Aluno();
             al._nome = txtNome.Text;
             al._telefone = txtTelefone.Text;
             al._email = txtEmail.Text;
