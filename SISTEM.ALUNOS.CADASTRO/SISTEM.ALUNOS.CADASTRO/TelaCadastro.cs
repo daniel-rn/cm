@@ -23,15 +23,13 @@ namespace SISTEM.ALUNOS.CADASTRO
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             alDAO = new AlunoDAO();
-            al = new Aluno();
-            al._nome = txtNome.Text;
-            al._telefone = txtTelefone.Text;
-            al._email = txtEmail.Text;
-
-            
-
+            al = new Aluno()
+            {
+                _nome = txtNome.Text,
+                _telefone = txtTelefone.Text,
+                _email = txtEmail.Text
+            };
             try
             {
                 alDAO.InsereAluno(al);
