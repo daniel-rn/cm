@@ -24,8 +24,8 @@ namespace SISTEM.ALUNOS.CADASTRO
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime agora = DateTime.Now;
-            //lbData.Text ="Data: "+agora.ToShortDateString()+" Hora: "+agora.ToLongTimeString();
-            lbData.Text =$"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
+            lbData.Text ="Data: "+agora.ToShortDateString()+" Hora: "+agora.ToLongTimeString();
+            //lbData.Text =$"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
             atualizaTable();
         }
         private void atualizaTable()

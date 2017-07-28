@@ -22,14 +22,8 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             try
             {
-                AlunoDAO alDao = new AlunoDAO();
-                //Aluno alunoLogin = new Aluno();
-
-                //alunoLogin._nome = txtNome.Text;
-                //alunoLogin._telefone = txtTelefone.Text;
-
-                alDao.SelectAluno(txtNome.Text, txtTelefone.Text);
-
+                
+                new AlunoDAO().SelectAluno(txtNome.Text,txtTelefone.Text);
                 MessageBox.Show("Sucesso !!!");
 
                 new TelaExibeCadastros().Show();

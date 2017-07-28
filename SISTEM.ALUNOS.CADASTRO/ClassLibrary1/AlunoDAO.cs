@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
+using System.Linq;
 
 namespace ClassLibrary1
 {
-    public class AlunoDAO
+    public  class AlunoDAO
     {
         public Object InsereAluno(Aluno aluno)
         {
@@ -34,7 +35,7 @@ namespace ClassLibrary1
                 Connection.Active(true);
 
                 string str = string.Format("select * from aluno " +
-                    "where nome = '{}' and telefone = '{}'",aluno._nome,aluno._telefone);
+                    "where nome = '{0}' and telefone = '{1}'",aluno._nome,aluno._telefone);
 
                 FbCommand cmd = new FbCommand(str, Connection.FbCnn);
 
@@ -66,7 +67,6 @@ namespace ClassLibrary1
             }
 
         }
-
-
+        
     }
 }
