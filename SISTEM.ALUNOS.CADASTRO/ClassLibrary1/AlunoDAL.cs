@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClassLibrary1;
-using System.Linq;
 
 namespace ClassLibrary1
 {
-    public  class AlunoDAO
+    public class AlunoDAL
     {
         public Object InsereAluno(Aluno aluno)
         {
@@ -35,7 +34,7 @@ namespace ClassLibrary1
                 Connection.Active(true);
 
                 string str = string.Format("select * from aluno " +
-                    "where nome = '{0}' and telefone = '{1}'",aluno._nome,aluno._telefone);
+                    "where nome = '{0}' and telefone = '{1}'", aluno._nome, aluno._telefone);
 
                 FbCommand cmd = new FbCommand(str, Connection.FbCnn);
 
@@ -48,17 +47,27 @@ namespace ClassLibrary1
             }
 
         }
-        public Object SelectAluno(string nome, string telefone)
+        public Aluno SelectAluno(string nome, string telefone)
         {
             try
             {
+                Aluno alunoSelecionado = new Aluno();
                 Connection.Active(true);
 
                 string str = string.Format("select * from aluno " + "where nome = '{0}' and telefone = '{1}'", nome, telefone);
 
                 FbCommand cmd = new FbCommand(str, Connection.FbCnn);
 
-                return cmd.ExecuteNonQuery();
+                FbDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    dataReader[0].ToString();
+                    alunoSelecionado._nome = dataReader[1].ToString();
+                    alunoSelecionado._telefone = dataReader[2].ToString();
+                    alunoSelecionado._email = dataReader[3].ToString();
+                }
+
+                return alunoSelecionado;
             }
             catch (Exception erro)
             {
@@ -67,6 +76,6 @@ namespace ClassLibrary1
             }
 
         }
-        
+
     }
 }

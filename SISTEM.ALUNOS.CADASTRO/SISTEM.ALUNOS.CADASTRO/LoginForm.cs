@@ -22,18 +22,21 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             try
             {
-                
-                new AlunoDAO().SelectAluno(txtNome.Text,txtTelefone.Text);
-                MessageBox.Show("Sucesso !!!");
+                Aluno alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text,txtTelefone.Text);
 
-                new TelaExibeCadastros().Show();
-                new TelaCadastro().Show();
+                if(alunoLogin._nome.Equals(txtNome.Text) && alunoLogin._telefone.Equals(txtTelefone.Text))
+                {
+                    new TelaCadastro().Show();
+                    new TelaExibeCadastros().Show();
+                }
             }
-            catch(Exception erro)
+            catch (Exception erro)
             {
-                MessageBox.Show("Erro ao fazer login: "+erro.Message);
+                MessageBox.Show("Erro ao fazer login: " + erro.Message);
             }
-            
+
+
         }
+
     }
 }

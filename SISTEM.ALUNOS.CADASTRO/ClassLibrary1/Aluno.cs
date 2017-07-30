@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Aluno
+    public class Aluno 
     {
         #region "Atributos"
         public string _nome;
@@ -18,7 +18,7 @@ namespace ClassLibrary1
         
         #endregion
 
-        //metodos
+        
         public FbDataReader Open(FbConnection _conn)
         {
             FbCommand cmd = new FbCommand();

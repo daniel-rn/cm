@@ -13,7 +13,7 @@ namespace SISTEM.ALUNOS.CADASTRO
 {
     public partial class TelaCadastro : Form
     {
-        AlunoDAO alDAO ;
+        AlunoDAL alDAO ;
         Aluno al;
         public TelaCadastro()
         {
@@ -23,7 +23,7 @@ namespace SISTEM.ALUNOS.CADASTRO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            alDAO = new AlunoDAO();
+            alDAO = new AlunoDAL();
             al = new Aluno()
             {
                 _nome = txtNome.Text,
@@ -33,11 +33,17 @@ namespace SISTEM.ALUNOS.CADASTRO
             try
             {
                 alDAO.InsereAluno(al);
+                MessageBox.Show("Registro inserido com sucesso !!!");
+                txtNome.Clear();
+                txtTelefone.Clear();
+                txtEmail.Clear();
+                txtNome.Focus();
+
             }
             catch (Exception erro)
             {
 
-                MessageBox.Show(erro.Message);
+                MessageBox.Show("Erro ao inserir o registro !!!",erro.Message);
             }
 
         }
