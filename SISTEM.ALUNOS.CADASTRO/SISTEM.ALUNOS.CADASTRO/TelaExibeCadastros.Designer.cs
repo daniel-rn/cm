@@ -54,7 +54,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 525);
+            this.panel1.Size = new System.Drawing.Size(784, 561);
             this.panel1.TabIndex = 0;
             // 
             // grid
@@ -67,16 +67,16 @@
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Location = new System.Drawing.Point(45, 88);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(693, 383);
+            this.grid.Size = new System.Drawing.Size(690, 419);
             this.grid.TabIndex = 0;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbData});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 503);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(787, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.Stretch = false;
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 525);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel1);
             this.Name = "TelaExibeCadastros";
             this.Text = "TelaExibeCadastros";
