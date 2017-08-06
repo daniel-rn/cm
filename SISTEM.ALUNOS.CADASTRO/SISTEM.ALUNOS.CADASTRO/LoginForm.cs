@@ -22,12 +22,13 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             try
             {
-                Aluno alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text,txtTelefone.Text);
+                var alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text, txtTelefone.Text);
 
-                if(alunoLogin._nome.Equals(txtNome.Text) && alunoLogin._telefone.Equals(txtTelefone.Text))
+                if (alunoLogin._nome.Equals(txtNome.Text) && alunoLogin._telefone.Equals(txtTelefone.Text))
                 {
                     new TelaCadastro().Show();
                     new TelaExibeCadastros().Show();
+
                 }
             }
             catch (Exception erro)

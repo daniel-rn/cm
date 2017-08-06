@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEntrar = new System.Windows.Forms.Button();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.lbSenha = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Location = new System.Drawing.Point(184, 163);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(77, 27);
-            this.btnEntrar.TabIndex = 0;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lbUsuario
             // 
@@ -77,6 +67,18 @@
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
             this.txtTelefone.TabIndex = 4;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Image = global::SISTEM.ALUNOS.CADASTRO.Properties.Resources._8432_64x64;
+            this.btnEntrar.Location = new System.Drawing.Point(33, 139);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(69, 66);
+            this.btnEntrar.TabIndex = 0;
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // LoginForm
             // 
