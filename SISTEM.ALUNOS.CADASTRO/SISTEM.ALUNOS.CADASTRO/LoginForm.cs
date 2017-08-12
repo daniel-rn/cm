@@ -20,6 +20,12 @@ namespace SISTEM.ALUNOS.CADASTRO
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Login();
+
+        }
+
+        private void Login()
+        {
             try
             {
                 var alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text, txtTelefone.Text);
@@ -35,9 +41,6 @@ namespace SISTEM.ALUNOS.CADASTRO
             {
                 MessageBox.Show("Erro ao fazer login: " + erro.Message);
             }
-
-
         }
-
     }
 }
