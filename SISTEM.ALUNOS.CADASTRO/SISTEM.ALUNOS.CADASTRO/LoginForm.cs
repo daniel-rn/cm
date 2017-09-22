@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary1;
+using Biblioteca;
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
@@ -30,17 +23,19 @@ namespace SISTEM.ALUNOS.CADASTRO
             {
                 var alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text, txtTelefone.Text);
 
-                if (alunoLogin._nome.Equals(txtNome.Text) && alunoLogin._telefone.Equals(txtTelefone.Text))
-                {
-                    new TelaCadastro().Show();
-                    new TelaExibeCadastros().Show();
-
-                }
+                if (!alunoLogin.Nome.Equals(txtNome.Text) || !alunoLogin.Telefone.Equals(txtTelefone.Text)) return;
+                new TelaCadastro().Show();
+                new TelaExibeCadastros().Show();
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao fazer login: " + erro.Message);
+                MessageBox.Show(@"Erro ao fazer login: " + erro.Message);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

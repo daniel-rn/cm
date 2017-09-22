@@ -1,47 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FirebirdSql.Data.FirebirdClient;
-using System.Data;
-using System.Data.Common;
+﻿using FirebirdSql.Data.FirebirdClient;
 
-namespace ClassLibrary1
+namespace Biblioteca
 {
     public static class Connection
     {
-        static FbConnection fbCnn;
-        static FbCommandBuilder fbCmm = new FbCommandBuilder();
-        
-        public static FbConnection FbCnn
-        {
-            get { return fbCnn; }
-        }
-        public static FbCommandBuilder FbCmm
-        {
-            get { return fbCmm; }
-        }
-        
-        public static Boolean Active(Boolean bActive)
+        public static FbConnection FbCnn { get; private set; }
+
+        public static FbCommandBuilder FbCmm { get; } = new FbCommandBuilder();
+
+        public static bool Active(bool bActive)
         {
             if (bActive)
             {
-                string _conn;
-                _conn = "User=SYSDBA;Password=masterkey";
-                _conn += ";Database = G:\\BANCOS\\CADASTRO.FDB";
-                //_conn += ";Database = C:\\Users\\Escolar Manager\\Desktop\\NASCIMENTO\\BANCO\\CADASTRO.FDB";
-                _conn += ";Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=0;";
-                _conn += "Connection timeout=7;Pooling=True;Packet Size=8192;Server Type=0";
-                fbCnn = new FbConnection(_conn);
-                fbCnn.Open();
+                FbCnn = new FbConnection(ConfiguracoesBanco());
+                FbCnn.Open();
                 return true;
-            }else
-            {
-                fbCnn.Close();
-                return false;
             }
+            FbCnn.Close();
+            return false;
         }
 
+        private static string ConfiguracoesBanco()
+        {
+            var configuracoesBanco = "User=SYSDBA;Password=masterkey";
+            configuracoesBanco += ";Database = G:\\BANCOS\\CADASTRO.FDB";
+            //configuracoesBanco += ";Database = C:\\Users\\Escolar Manager\\Desktop\\NASCIMENTO\\BANCO\\CADASTRO.FDB";
+            configuracoesBanco += ";Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=0;";
+            configuracoesBanco += "Connection timeout=7;Pooling=True;Packet Size=8192;Server Type=0";
+            return configuracoesBanco;
+        }
     }
 }

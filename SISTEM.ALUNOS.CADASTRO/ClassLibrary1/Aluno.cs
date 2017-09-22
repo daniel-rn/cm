@@ -1,29 +1,24 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Biblioteca
 {
     public class Aluno 
     {
         #region "Atributos"
-        public string _nome;
+        public string Nome { get; set; }
 
-        public string _telefone;
+        public string Telefone { get; set; }
 
-        public string _email;
-        
+        public string Email { get; set; }
         #endregion
 
-        
         public FbDataReader Open(FbConnection _conn)
         {
-            FbCommand cmd = new FbCommand();
-            cmd.Connection = _conn;
-            cmd.CommandText = "select * from aluno";
+            var cmd = new FbCommand
+            {
+                Connection = _conn,
+                CommandText = "select * from aluno"
+            };
             return cmd.ExecuteReader();
         }
     }

@@ -1,5 +1,4 @@
-﻿using ClassLibrary1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,44 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca;
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
     public partial class TelaCadastro : Form
     {
-        AlunoDAL alDAO ;
-        Aluno al;
+        private AlunoDAL AlunoDAO;
+        private Aluno _aluno;
+
         public TelaCadastro()
         {
             InitializeComponent();
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            alDAO = new AlunoDAL();
-            al = new Aluno()
+            AlunoDAO = new AlunoDAL();
+            _aluno = new Aluno
             {
-                _nome = txtNome.Text,
-                _telefone = txtTelefone.Text,
-                _email = txtEmail.Text
+                Nome = txtNome.Text,
+                Telefone = txtTelefone.Text,
+                Email = txtEmail.Text
             };
             try
             {
-                alDAO.InsereAluno(al);
-                MessageBox.Show("Registro inserido com sucesso !!!");
-                txtNome.Clear();
-                txtTelefone.Clear();
-                txtEmail.Clear();
-                txtNome.Focus();
-
+                AlunoDAO.InsereAluno(_aluno);
+                MessageBox.Show(@"Registro inserido com sucesso !!!");
+                LimpaCampos();
             }
             catch (Exception erro)
             {
-
-                MessageBox.Show("Erro ao inserir o registro !!!",erro.Message);
+                MessageBox.Show(@"Erro ao inserir o registro !!!",erro.Message);
             }
 
+        }
+
+        private void LimpaCampos()
+        {
+            txtNome.Clear();
+            txtTelefone.Clear();
+            txtEmail.Clear();
+            txtNome.Focus();
         }
     }
 }

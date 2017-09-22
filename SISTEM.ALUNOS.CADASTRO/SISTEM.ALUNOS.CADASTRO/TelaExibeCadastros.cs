@@ -1,53 +1,42 @@
-﻿using ClassLibrary1;
-using FirebirdSql.Data.FirebirdClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca;
 
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
     public partial class TelaExibeCadastros : Form
     {
-        private Aluno aluno = new Aluno();
+        private readonly Aluno aluno = new Aluno();
+
         public TelaExibeCadastros()
         {
             InitializeComponent();
-
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime agora = DateTime.Now;
-            lbData.Text ="Data: "+agora.ToShortDateString()+" Hora: "+agora.ToLongTimeString();
-            //lbData.Text =$"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
+            var agora = DateTime.Now;
+            lbData.Text = $@"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
         }
-        private void atualizaTable()
+
+        private void AtualizaTable()
         {
             try
             {
-                DataTable dtAlunos = new DataTable();
-                FbDataReader fbReader;
-                fbReader = aluno.Open(Connection.FbCnn);
-                dtAlunos.Load(fbReader);
-                grid.DataSource = dtAlunos;
-
+                var fbReader = aluno.Open(Connection.FbCnn);
+                var bsAlunos = new BindingSource {DataSource = fbReader};
+                grid.DataSource = bsAlunos;
             }
-            catch (Exception err)
+            catch (Exception erroException)
             {
-
-                MessageBox.Show(err.Message);
+                MessageBox.Show(erroException.Message);
             }
         }
-
         private void TelaExibeCadastros_Load(object sender, EventArgs e)
         {
-            atualizaTable();
+            AtualizaTable();
             timer1_Tick(e,e);
         }
     }
