@@ -33,11 +33,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lbData = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.DataGridView();
+            this.lbData = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,20 +66,12 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // lbData
-            // 
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(118, 17);
-            this.lbData.Text = "toolStripStatusLabel1";
-            this.lbData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 56);
+            this.label1.Location = new System.Drawing.Point(42, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 29);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "ALUNOS";
             // 
@@ -92,10 +83,17 @@
             this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(45, 88);
+            this.grid.Location = new System.Drawing.Point(42, 88);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(690, 419);
+            this.grid.Size = new System.Drawing.Size(690, 433);
             this.grid.TabIndex = 0;
+            // 
+            // lbData
+            // 
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(118, 17);
+            this.lbData.Text = "toolStripStatusLabel1";
+            this.lbData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TelaExibeCadastros
             // 
@@ -109,8 +107,6 @@
             this.Load += new System.EventHandler(this.TelaExibeCadastros_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 

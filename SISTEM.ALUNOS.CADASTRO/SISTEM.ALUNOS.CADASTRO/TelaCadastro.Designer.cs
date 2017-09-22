@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastro));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbNome = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
@@ -122,6 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadastro";
             this.Text = "TelaCadastro";
             this.panel1.ResumeLayout(false);
