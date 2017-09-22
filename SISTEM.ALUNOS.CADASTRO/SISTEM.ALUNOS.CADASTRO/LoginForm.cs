@@ -6,7 +6,7 @@ namespace SISTEM.ALUNOS.CADASTRO
 {
     public partial class LoginForm : FormBase
     {
-        public LoginForm()
+        public LoginForm():base("Login")
         {
             InitializeComponent();
         }

@@ -12,14 +12,28 @@ namespace SISTEM.ALUNOS.CADASTRO
 {
     public partial class FormBase : Form
     {
-        public FormBase()
+        private string _nomeDaFuncao;
+        public FormBase(string nomeDaFuncao)
         {
             InitializeComponent();
+            _nomeDaFuncao = nomeDaFuncao;
         }
 
         private void FormBase_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var agora = DateTime.Now;
+            tslHora.Text = $@"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
+        }
+
+        private void FormBase_Load(object sender, EventArgs e)
+        {
+            timer1_Tick(e,e);
+            label1.Text = _nomeDaFuncao;
         }
     }
 }

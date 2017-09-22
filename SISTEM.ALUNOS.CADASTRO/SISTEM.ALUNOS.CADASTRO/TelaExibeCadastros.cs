@@ -10,16 +10,9 @@ namespace SISTEM.ALUNOS.CADASTRO
     {
         private readonly Aluno aluno = new Aluno();
 
-        public TelaExibeCadastros()
+        public TelaExibeCadastros():base("Exibe Cadastros")
         {
             InitializeComponent();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            var agora = DateTime.Now;
-            lbData.Text = $@"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
-            tslHora = lbData;
         }
 
         private void AtualizaTable()
@@ -38,7 +31,6 @@ namespace SISTEM.ALUNOS.CADASTRO
         private void TelaExibeCadastros_Load(object sender, EventArgs e)
         {
             AtualizaTable();
-            timer1_Tick(e,e);
         }
     }
 }

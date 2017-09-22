@@ -15,7 +15,8 @@ namespace SISTEM.ALUNOS.CADASTRO
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AboutBox1());
             Application.Run(new LoginForm());
-           
+
         }
+
     }
 }
