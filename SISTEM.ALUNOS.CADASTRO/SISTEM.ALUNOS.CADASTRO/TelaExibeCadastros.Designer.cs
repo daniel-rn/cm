@@ -36,7 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.DataGridView();
             this.lbData = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +61,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tslHora});
             this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(784, 22);
@@ -95,6 +99,11 @@
             this.lbData.Text = "toolStripStatusLabel1";
             this.lbData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tslHora
+            // 
+            this.tslHora.Name = "tslHora";
+            this.tslHora.Size = new System.Drawing.Size(0, 17);
+            // 
             // TelaExibeCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +116,8 @@
             this.Load += new System.EventHandler(this.TelaExibeCadastros_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
@@ -120,5 +131,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lbData;
+        private System.Windows.Forms.ToolStripStatusLabel tslHora;
     }
 }

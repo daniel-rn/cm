@@ -4,7 +4,7 @@ using Biblioteca;
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : FormBase
     {
         public LoginForm()
         {
@@ -26,10 +26,12 @@ namespace SISTEM.ALUNOS.CADASTRO
                 if (!alunoLogin.Nome.Equals(txtNome.Text) || !alunoLogin.Telefone.Equals(txtTelefone.Text)) return;
                 new TelaCadastro().Show();
                 new TelaExibeCadastros().Show();
+                Hide();
             }
             catch (Exception erro)
             {
-                MessageBox.Show(@"Erro ao fazer login: " + erro.Message);
+                var mensagemErro = "Erro ao fazer login: \nUsuário ou senha inválidos !!\n";
+                MessageBox.Show($"{mensagemErro}{erro}");
             }
         }
 

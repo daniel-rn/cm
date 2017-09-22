@@ -6,7 +6,7 @@ using Biblioteca;
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
-    public partial class TelaExibeCadastros : Form
+    public partial class TelaExibeCadastros : FormBase
     {
         private readonly Aluno aluno = new Aluno();
 
@@ -19,6 +19,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             var agora = DateTime.Now;
             lbData.Text = $@"Data: {agora.ToShortDateString()} Hora: {agora.ToLongTimeString()}";
+            tslHora = lbData;
         }
 
         private void AtualizaTable()

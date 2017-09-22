@@ -11,7 +11,7 @@ using Biblioteca;
 
 namespace SISTEM.ALUNOS.CADASTRO
 {
-    public partial class TelaCadastro : Form
+    public partial class TelaCadastro : FormBase
     {
         private AlunoDAL AlunoDAO;
         private Aluno _aluno;
