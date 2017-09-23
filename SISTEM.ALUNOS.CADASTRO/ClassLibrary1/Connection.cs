@@ -1,6 +1,6 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 
-namespace Biblioteca
+namespace CORE
 {
     public static class Connection
     {

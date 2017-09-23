@@ -600,7 +600,9 @@
         cJWw3xX9u6JfoPW7on9X9Ku1flf074p+tdbviv5d0a/S+r//+/8BPTxUq6Ub7iwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="LoginForm_Login_Erro_ao_fazer_login__" xml:space="preserve">
-    <value>Erro ao fazer login: </value>
+  <data name="LoginForm_Login_" xml:space="preserve">
+    <value>Erro ao fazer login:
+Usuário ou senha inválidos !!
+{0}</value>
   </data>
 </root>

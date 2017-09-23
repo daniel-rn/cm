@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
-using Biblioteca;
+using CORE;
 
 
-namespace SISTEM.ALUNOS.CADASTRO
+namespace CORUJA
 {
     public partial class TelaExibeCadastros : FormBase
     {
-        private readonly Aluno aluno = new Aluno();
+        private readonly Aluno _aluno = new Aluno();
 
         public TelaExibeCadastros() : base("Exibe Cadastros")
         {
@@ -19,7 +18,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         {
             try
             {
-                var fbReader = aluno.Open(Connection.FbCnn);
+                var fbReader = _aluno.Open(Connection.FbCnn);
                 var bsAlunos = new BindingSource {DataSource = fbReader};
                 grid.DataSource = bsAlunos;
             }

@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Biblioteca;
+using CORE;
 
-namespace SISTEM.ALUNOS.CADASTRO
+namespace CORUJA
 {
     public partial class TelaCadastro : FormBase
     {
-        private AlunoDAL AlunoDAO;
+        private AlunoDAL _alunoDao;
         private Aluno _aluno;
 
         public TelaCadastro():base("Cadastro de pessoas")
@@ -23,7 +16,7 @@ namespace SISTEM.ALUNOS.CADASTRO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlunoDAO = new AlunoDAL();
+            _alunoDao = new AlunoDAL();
             _aluno = new Aluno
             {
                 Nome = txtNome.Text,
@@ -32,7 +25,7 @@ namespace SISTEM.ALUNOS.CADASTRO
             };
             try
             {
-                AlunoDAO.InsereAluno(_aluno);
+                _alunoDao.InsereAluno(_aluno);
                 MessageBox.Show(@"Registro inserido com sucesso !!!");
                 LimpaCampos();
             }

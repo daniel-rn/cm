@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SISTEM.ALUNOS.CADASTRO
+namespace CORUJA
 {
     internal static class Program
     {
@@ -27,15 +28,14 @@ namespace SISTEM.ALUNOS.CADASTRO
 #endif
         }
 
-        private static void ExecuteAplicacao(string[] args)
+        private static void ExecuteAplicacao(IReadOnlyList<string> args)
         {
             var idFormulario = args[0];
             var ass = Assembly.GetExecutingAssembly();
-            var frm = ass.CreateInstance(string.Concat("SISTEM.ALUNOS.CADASTRO.", idFormulario)) as Form;
 
-            if (frm == null)
+            if (!(ass.CreateInstance(string.Concat("CORUJA.", idFormulario)) is Form frm))
             {
-                MessageBox.Show($"Formulário não encontrado: {idFormulario}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Application.Run(frm);

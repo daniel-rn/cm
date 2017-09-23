@@ -1,4 +1,4 @@
-﻿namespace SISTEM.ALUNOS.CADASTRO
+﻿namespace CORUJA
 {
     partial class FormBase
     {

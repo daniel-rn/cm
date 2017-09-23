@@ -1,9 +1,10 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 
-namespace Biblioteca
+namespace CORE
 {
     public class Aluno 
     {
+        private const string Sql = "select * from aluno";
         #region "Atributos"
         public string Nome { get; set; }
 
@@ -17,7 +18,7 @@ namespace Biblioteca
             var cmd = new FbCommand
             {
                 Connection = _conn,
-                CommandText = "select * from aluno"
+                CommandText = Sql
             };
             return cmd.ExecuteReader();
         }

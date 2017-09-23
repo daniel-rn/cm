@@ -1,7 +1,7 @@
 ﻿using System;
 using FirebirdSql.Data.FirebirdClient;
 
-namespace Biblioteca
+namespace CORE
 {
     public class AlunoDAL
     {

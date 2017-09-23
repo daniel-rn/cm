@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using Biblioteca;
+using CORE;
 
-namespace SISTEM.ALUNOS.CADASTRO
+namespace CORUJA
 {
     public partial class LoginForm : FormBase
     {
-        public LoginForm():base("Login")
+        public LoginForm() : base("Login")
         {
             InitializeComponent();
         }
@@ -30,9 +30,13 @@ namespace SISTEM.ALUNOS.CADASTRO
             }
             catch (Exception erro)
             {
-                var mensagemErro = "Erro ao fazer login: \nUsuário ou senha inválidos !!\n";
-                MessageBox.Show($"{mensagemErro}{erro}");
+                MessageBox.Show(MensagemDeErro(erro));
             }
+        }
+
+        private static string MensagemDeErro(Exception erro)
+        {
+            return $"Erro ao fazer login:\nUsuário ou senha inválidos !!\n{erro}";
         }
 
         private void btnSair_Click(object sender, EventArgs e)
