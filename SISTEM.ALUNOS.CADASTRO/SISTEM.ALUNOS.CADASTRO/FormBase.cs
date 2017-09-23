@@ -13,10 +13,16 @@ namespace SISTEM.ALUNOS.CADASTRO
     public partial class FormBase : Form
     {
         private string _nomeDaFuncao;
+
         public FormBase(string nomeDaFuncao)
         {
             InitializeComponent();
             _nomeDaFuncao = nomeDaFuncao;
+        }
+
+        public FormBase()
+        {
+            InitializeComponent();
         }
 
         private void FormBase_FormClosing(object sender, FormClosingEventArgs e)
@@ -33,7 +39,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         private void FormBase_Load(object sender, EventArgs e)
         {
             timer1_Tick(e,e);
-            label1.Text = _nomeDaFuncao;
+            lbNomeDaFuncao.Text = _nomeDaFuncao;
         }
     }
 }

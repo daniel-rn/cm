@@ -91,10 +91,10 @@
             this.panel1.Controls.Add(this.btnEntrar);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.lbSenha);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 561);
+            this.panel1.Size = new System.Drawing.Size(784, 472);
             this.panel1.TabIndex = 5;
             // 
             // btnSair
@@ -117,9 +117,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

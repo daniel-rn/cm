@@ -34,7 +34,8 @@
             this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbNomeDaFuncao = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,22 +72,32 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lbNomeDaFuncao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Magneto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(535, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome Da Função";
+            this.lbNomeDaFuncao.AutoSize = true;
+            this.lbNomeDaFuncao.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeDaFuncao.Font = new System.Drawing.Font("Magneto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNomeDaFuncao.Location = new System.Drawing.Point(444, 21);
+            this.lbNomeDaFuncao.Name = "lbNomeDaFuncao";
+            this.lbNomeDaFuncao.Size = new System.Drawing.Size(237, 28);
+            this.lbNomeDaFuncao.TabIndex = 2;
+            this.lbNomeDaFuncao.Text = "Nome Da Função";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(784, 472);
+            this.panel1.TabIndex = 3;
             // 
             // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbNomeDaFuncao);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -108,6 +119,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tslHora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbNomeDaFuncao;
+        private System.Windows.Forms.Panel panel1;
     }
 }

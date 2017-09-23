@@ -10,7 +10,7 @@ namespace SISTEM.ALUNOS.CADASTRO
     {
         private readonly Aluno aluno = new Aluno();
 
-        public TelaExibeCadastros():base("Exibe Cadastros")
+        public TelaExibeCadastros() : base("Exibe Cadastros")
         {
             InitializeComponent();
         }

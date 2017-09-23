@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SISTEMA.ALUNOS.CADASTRO", "SISTEM.ALUNOS.CADASTRO\SISTEMA.ALUNOS.CADASTRO.csproj", "{AB1CF1C3-E648-4E5A-80B3-9DAABC68370A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORUJA", "SISTEM.ALUNOS.CADASTRO\CORUJA.csproj", "{AB1CF1C3-E648-4E5A-80B3-9DAABC68370A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SISTEMA.ALUNOS.BIBLIOTECA", "ClassLibrary1\SISTEMA.ALUNOS.BIBLIOTECA.csproj", "{F380E878-D423-4921-9E65-1EB7BD32E27A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE", "ClassLibrary1\CORE.csproj", "{F380E878-D423-4921-9E65-1EB7BD32E27A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD605144-9383-4B4A-AA21-A3F54D1203E6}
 	EndGlobalSection
 EndGlobal

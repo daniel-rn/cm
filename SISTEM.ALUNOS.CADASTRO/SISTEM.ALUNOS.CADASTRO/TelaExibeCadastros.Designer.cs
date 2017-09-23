@@ -42,9 +42,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.grid);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 561);
+            this.panel1.Size = new System.Drawing.Size(784, 472);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -66,7 +66,7 @@
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Location = new System.Drawing.Point(42, 88);
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(690, 433);
+            this.grid.Size = new System.Drawing.Size(690, 344);
             this.grid.TabIndex = 0;
             // 
             // lbData
@@ -86,10 +86,12 @@
             this.Name = "TelaExibeCadastros";
             this.Text = "TelaExibeCadastros";
             this.Load += new System.EventHandler(this.TelaExibeCadastros_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

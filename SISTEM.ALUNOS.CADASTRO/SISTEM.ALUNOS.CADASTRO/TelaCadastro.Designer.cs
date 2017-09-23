@@ -45,7 +45,7 @@
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(7, 19);
+            this.lbNome.Location = new System.Drawing.Point(12, 18);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(35, 13);
             this.lbNome.TabIndex = 0;
@@ -112,9 +112,9 @@
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 561);
+            this.panel1.Size = new System.Drawing.Size(784, 472);
             this.panel1.TabIndex = 8;
             // 
             // TelaCadastro
@@ -126,9 +126,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadastro";
             this.Text = "TelaCadastro";
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

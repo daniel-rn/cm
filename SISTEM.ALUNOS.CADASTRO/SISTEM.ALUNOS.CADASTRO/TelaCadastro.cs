@@ -16,7 +16,7 @@ namespace SISTEM.ALUNOS.CADASTRO
         private AlunoDAL AlunoDAO;
         private Aluno _aluno;
 
-        public TelaCadastro():base("Cadastro de Pessoas")
+        public TelaCadastro():base("Cadastro de pessoas")
         {
             InitializeComponent();
         }
