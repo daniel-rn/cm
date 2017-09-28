@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORUJA", "SISTEM.ALUNOS.CADASTRO\CORUJA.csproj", "{AB1CF1C3-E648-4E5A-80B3-9DAABC68370A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7741D685-067B-4060-B880-014898DE0F02} = {7741D685-067B-4060-B880-014898DE0F02}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE", "ClassLibrary1\CORE.csproj", "{F380E878-D423-4921-9E65-1EB7BD32E27A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CONTROLES", "CONTROLES\CONTROLES.csproj", "{7741D685-067B-4060-B880-014898DE0F02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{F380E878-D423-4921-9E65-1EB7BD32E27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F380E878-D423-4921-9E65-1EB7BD32E27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F380E878-D423-4921-9E65-1EB7BD32E27A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7741D685-067B-4060-B880-014898DE0F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7741D685-067B-4060-B880-014898DE0F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7741D685-067B-4060-B880-014898DE0F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7741D685-067B-4060-B880-014898DE0F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
