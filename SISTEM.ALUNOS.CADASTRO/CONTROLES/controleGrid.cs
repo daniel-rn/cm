@@ -4,8 +4,10 @@ namespace CONTROLES
 {
     public partial class ControleGrid : UserControl
     {
-        public ControleGrid()
+        private BindingSource _bs;
+        public ControleGrid(BindingSource bs)
         {
+            _bs = bs;
             InitializeComponent();
         }
     }

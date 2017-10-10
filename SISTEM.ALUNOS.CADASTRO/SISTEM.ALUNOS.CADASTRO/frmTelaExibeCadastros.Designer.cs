@@ -1,6 +1,6 @@
 ﻿namespace CORUJA
 {
-    partial class TelaExibeCadastros
+    partial class frmTelaExibeCadastros
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaExibeCadastros));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaExibeCadastros));
             this.pnlDgv = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grid = new System.Windows.Forms.DataGridView();

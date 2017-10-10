@@ -1,6 +1,6 @@
 ﻿namespace CORUJA
 {
-    partial class LoginForm
+    partial class frmLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginForm));
             this.lbUsuario = new System.Windows.Forms.Label();
             this.lbSenha = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();

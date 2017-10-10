@@ -5,11 +5,11 @@ using CORE;
 
 namespace CORUJA
 {
-    public partial class TelaExibeCadastros : FormBase
+    public partial class frmTelaExibeCadastros : FormBase
     {
         private readonly Aluno _aluno = new Aluno();
 
-        public TelaExibeCadastros() : base("Exibe Cadastros")
+        public frmTelaExibeCadastros() : base("Exibe Cadastros")
         {
             InitializeComponent();
         }

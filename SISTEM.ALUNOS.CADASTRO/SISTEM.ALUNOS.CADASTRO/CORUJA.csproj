@@ -73,11 +73,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
+    <Compile Include="frmFrenteDeCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <Compile Include="frmFrenteDeCaixa.Designer.cs">
+      <DependentUpon>frmFrenteDeCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesteDeObjetos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesteDeObjetos.Designer.cs">
+      <DependentUpon>frmTesteDeObjetos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
@@ -85,34 +91,37 @@
     <Compile Include="FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="frmLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="frmLoginForm.Designer.cs">
+      <DependentUpon>frmLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaCadastro.cs">
+    <Compile Include="frmTelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadastro.Designer.cs">
-      <DependentUpon>TelaCadastro.cs</DependentUpon>
+    <Compile Include="frmTelaCadastro.Designer.cs">
+      <DependentUpon>frmTelaCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaExibeCadastros.cs">
+    <Compile Include="frmTelaExibeCadastros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaExibeCadastros.Designer.cs">
-      <DependentUpon>TelaExibeCadastros.cs</DependentUpon>
+    <Compile Include="frmTelaExibeCadastros.Designer.cs">
+      <DependentUpon>frmTelaExibeCadastros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="frmFrenteDeCaixa.resx">
+      <DependentUpon>frmFrenteDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesteDeObjetos.resx">
+      <DependentUpon>frmTesteDeObjetos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginForm.resx">
+      <DependentUpon>frmLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,11 +133,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaCadastro.resx">
-      <DependentUpon>TelaCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="frmTelaCadastro.resx">
+      <DependentUpon>frmTelaCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaExibeCadastros.resx">
-      <DependentUpon>TelaExibeCadastros.cs</DependentUpon>
+    <EmbeddedResource Include="frmTelaExibeCadastros.resx">
+      <DependentUpon>frmTelaExibeCadastros.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

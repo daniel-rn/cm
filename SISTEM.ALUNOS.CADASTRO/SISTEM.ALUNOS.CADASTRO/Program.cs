@@ -17,8 +17,7 @@ namespace CORUJA
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new AboutBox1());
-                Application.Run(new LoginForm());
+                Application.Run(new frmLoginForm());
             }
 #if DEBUG
             else
@@ -33,7 +32,7 @@ namespace CORUJA
             var idFormulario = args[0];
             var ass = Assembly.GetExecutingAssembly();
 
-            if (!(ass.CreateInstance(string.Concat("CORUJA.", idFormulario)) is Form frm))
+            if (!(ass.CreateInstance($"CORUJA.{idFormulario}") is Form frm))
             {
                 MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

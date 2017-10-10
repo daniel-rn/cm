@@ -4,19 +4,19 @@ using CORE;
 
 namespace CORUJA
 {
-    public partial class TelaCadastro : FormBase
+    public partial class frmTelaCadastro : FormBase
     {
-        private AlunoDAL _alunoDao;
+        private AlunoDal _alunoDao;
         private Aluno _aluno;
 
-        public TelaCadastro():base("Cadastro de pessoas")
+        public frmTelaCadastro():base("Cadastro de pessoas")
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _alunoDao = new AlunoDAL();
+            _alunoDao = new AlunoDal();
             _aluno = new Aluno
             {
                 Nome = txtNome.Text,

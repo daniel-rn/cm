@@ -4,9 +4,9 @@ using CORE;
 
 namespace CORUJA
 {
-    public partial class LoginForm : FormBase
+    public partial class frmLoginForm : FormBase
     {
-        public LoginForm() : base("Login")
+        public frmLoginForm() : base("Login")
         {
             InitializeComponent();
         }
@@ -21,11 +21,11 @@ namespace CORUJA
         {
             try
             {
-                var alunoLogin = new AlunoDAL().SelectAluno(txtNome.Text, txtTelefone.Text);
+                var alunoLogin = new AlunoDal().SelectAluno(txtNome.Text, txtTelefone.Text);
 
                 if (!alunoLogin.Nome.Equals(txtNome.Text) || !alunoLogin.Telefone.Equals(txtTelefone.Text)) return;
-                new TelaCadastro().Show();
-                new TelaExibeCadastros().Show();
+                new frmTelaCadastro().Show();
+                new frmTelaExibeCadastros().Show();
                 Hide();
             }
             catch (Exception erro)

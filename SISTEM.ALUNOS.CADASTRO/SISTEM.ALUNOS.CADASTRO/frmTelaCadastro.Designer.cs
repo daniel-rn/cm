@@ -1,6 +1,6 @@
 ﻿namespace CORUJA
 {
-    partial class TelaCadastro
+    partial class frmTelaCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaCadastro));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbNome = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
