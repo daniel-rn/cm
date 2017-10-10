@@ -17,10 +17,16 @@ namespace CORUJA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+            var frm = new frmItemPedido();
+            frm.ShowDialog();
 
-            //_bs.Add(frm);
+            var item = frm.ObtenhaItemDePedido();
+
+            if (item != null)
+            {
+                _bs.Add(item);
+            }
+            
             AjustaTotal();
         }
 
@@ -31,9 +37,34 @@ namespace CORUJA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (_bs.Current != null) _bs.RemoveCurrent();
-           
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var frm = new frmItemPedido();
+            frm.ShowDialog();
+
+            var item = frm.ObtenhaItemDePedido();
+
+            if (item != null)
+            {
+                _bs.Add(item);
+            }
+
             AjustaTotal();
+           
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (_bs.Current != null) _bs.RemoveCurrent();
+            AjustaTotal();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            _bs.Clear();
         }
     }
 }
