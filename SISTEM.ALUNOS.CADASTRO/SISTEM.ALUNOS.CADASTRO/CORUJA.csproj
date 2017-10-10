@@ -79,6 +79,12 @@
     <Compile Include="frmFrenteDeCaixa.Designer.cs">
       <DependentUpon>frmFrenteDeCaixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmItemPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemPedido.Designer.cs">
+      <DependentUpon>frmItemPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTesteDeObjetos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFrenteDeCaixa.resx">
       <DependentUpon>frmFrenteDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemPedido.resx">
+      <DependentUpon>frmItemPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTesteDeObjetos.resx">
       <DependentUpon>frmTesteDeObjetos.cs</DependentUpon>

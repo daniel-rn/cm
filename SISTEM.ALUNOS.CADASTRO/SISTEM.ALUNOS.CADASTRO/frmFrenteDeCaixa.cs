@@ -15,10 +15,12 @@ namespace CORUJA
             dgvRelacaoDeItens.DataSource = _bs;
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var item = new ItemDePedido("Fuba", 3.49);
-            _bs.Add(item);
+            
+            
+
+            //_bs.Add(frm);
             AjustaTotal();
         }
 
@@ -27,9 +29,11 @@ namespace CORUJA
             txtTotal.Text = _bs.ObtenhaTodos().Sum(c => c.Preco).ToString(CultureInfo.InvariantCulture);
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            _bs.RemoveCurrent();
+            if (_bs.Current != null) _bs.RemoveCurrent();
+           
+            AjustaTotal();
         }
     }
 }
