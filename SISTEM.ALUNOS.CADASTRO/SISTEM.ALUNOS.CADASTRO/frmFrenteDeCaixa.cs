@@ -15,29 +15,9 @@ namespace CORUJA
             dgvRelacaoDeItens.DataSource = _bs;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var frm = new frmItemPedido();
-            frm.ShowDialog();
-
-            var item = frm.ObtenhaItemDePedido();
-
-            if (item != null)
-            {
-                _bs.Add(item);
-            }
-            
-            AjustaTotal();
-        }
-
         private void AjustaTotal()
         {
             txtTotal.Text = _bs.ObtenhaTodos().Sum(c => c.Preco).ToString(CultureInfo.InvariantCulture);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -47,10 +27,8 @@ namespace CORUJA
 
             var item = frm.ObtenhaItemDePedido();
 
-            if (item != null)
-            {
-                _bs.Add(item);
-            }
+            if (item != null) _bs.Add(item);
+          
 
             AjustaTotal();
            
@@ -65,6 +43,11 @@ namespace CORUJA
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             _bs.Clear();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

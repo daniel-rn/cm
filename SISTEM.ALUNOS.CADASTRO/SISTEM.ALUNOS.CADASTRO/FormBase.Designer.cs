@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -62,8 +61,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(784, 67);
@@ -74,7 +73,7 @@
             // lbNomeDaFuncao
             // 
             this.lbNomeDaFuncao.AutoSize = true;
-            this.lbNomeDaFuncao.BackColor = System.Drawing.Color.Transparent;
+            this.lbNomeDaFuncao.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lbNomeDaFuncao.Font = new System.Drawing.Font("Magneto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNomeDaFuncao.Location = new System.Drawing.Point(449, 9);
             this.lbNomeDaFuncao.Name = "lbNomeDaFuncao";

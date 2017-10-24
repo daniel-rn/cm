@@ -31,8 +31,8 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.btnIncluir = new System.Windows.Forms.Button();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblDescricao
@@ -60,13 +60,6 @@
             this.txtDescricao.Size = new System.Drawing.Size(163, 20);
             this.txtDescricao.TabIndex = 2;
             // 
-            // txtPreco
-            // 
-            this.txtPreco.Location = new System.Drawing.Point(90, 70);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(163, 20);
-            this.txtPreco.TabIndex = 3;
-            // 
             // btnIncluir
             // 
             this.btnIncluir.Location = new System.Drawing.Point(90, 137);
@@ -77,13 +70,23 @@
             this.btnIncluir.UseVisualStyleBackColor = true;
             this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
+            // txtPreco
+            // 
+            this.txtPreco.Location = new System.Drawing.Point(90, 71);
+            this.txtPreco.Mask = "000,00";
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(163, 20);
+            this.txtPreco.TabIndex = 5;
+            this.txtPreco.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPreco.ValidatingType = typeof(int);
+            // 
             // frmItemPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblDescricao);
@@ -99,7 +102,7 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.MaskedTextBox txtPreco;
     }
 }
