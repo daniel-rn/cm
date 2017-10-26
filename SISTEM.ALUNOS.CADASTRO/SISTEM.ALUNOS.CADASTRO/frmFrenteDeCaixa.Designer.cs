@@ -30,83 +30,84 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFrenteDeCaixa));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbAdicionar = new System.Windows.Forms.PictureBox();
+            this.pbExcluir = new System.Windows.Forms.PictureBox();
+            this.pbAdicionarTodosAoCarrinho = new System.Windows.Forms.PictureBox();
+            this.pbExcluirTodos = new System.Windows.Forms.PictureBox();
             this.dgvRelacaoDeItens = new System.Windows.Forms.DataGridView();
             this.lblTotalDaCompra = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdicionar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcluir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdicionarTodosAoCarrinho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcluirTodos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelacaoDeItens)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
+            this.flowLayoutPanel1.Controls.Add(this.pbAdicionar);
+            this.flowLayoutPanel1.Controls.Add(this.pbExcluir);
+            this.flowLayoutPanel1.Controls.Add(this.pbAdicionarTodosAoCarrinho);
+            this.flowLayoutPanel1.Controls.Add(this.pbExcluirTodos);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(744, 67);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(40, 472);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // pictureBox2
+            // pbAdicionar
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pbAdicionar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("pbAdicionar.Image")));
+            this.pbAdicionar.Location = new System.Drawing.Point(3, 3);
+            this.pbAdicionar.Name = "pbAdicionar";
+            this.pbAdicionar.Size = new System.Drawing.Size(32, 32);
+            this.pbAdicionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdicionar.TabIndex = 4;
+            this.pbAdicionar.TabStop = false;
+            this.pbAdicionar.Click += new System.EventHandler(this.pbAdicionar_Click);
             // 
-            // pictureBox3
+            // pbExcluir
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pbExcluir.BackColor = System.Drawing.SystemColors.Control;
+            this.pbExcluir.Image = ((System.Drawing.Image)(resources.GetObject("pbExcluir.Image")));
+            this.pbExcluir.Location = new System.Drawing.Point(3, 41);
+            this.pbExcluir.Name = "pbExcluir";
+            this.pbExcluir.Size = new System.Drawing.Size(32, 32);
+            this.pbExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExcluir.TabIndex = 5;
+            this.pbExcluir.TabStop = false;
+            this.pbExcluir.Click += new System.EventHandler(this.pbExcluir_Click);
             // 
-            // pictureBox4
+            // pbAdicionarTodosAoCarrinho
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 79);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pbAdicionarTodosAoCarrinho.BackColor = System.Drawing.SystemColors.Control;
+            this.pbAdicionarTodosAoCarrinho.Image = ((System.Drawing.Image)(resources.GetObject("pbAdicionarTodosAoCarrinho.Image")));
+            this.pbAdicionarTodosAoCarrinho.Location = new System.Drawing.Point(3, 79);
+            this.pbAdicionarTodosAoCarrinho.Name = "pbAdicionarTodosAoCarrinho";
+            this.pbAdicionarTodosAoCarrinho.Size = new System.Drawing.Size(32, 32);
+            this.pbAdicionarTodosAoCarrinho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdicionarTodosAoCarrinho.TabIndex = 6;
+            this.pbAdicionarTodosAoCarrinho.TabStop = false;
+            this.pbAdicionarTodosAoCarrinho.Click += new System.EventHandler(this.pbAdicionarTodosAoCarrinho_Click);
             // 
-            // pictureBox5
+            // pbExcluirTodos
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 117);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pbExcluirTodos.BackColor = System.Drawing.SystemColors.Control;
+            this.pbExcluirTodos.Image = ((System.Drawing.Image)(resources.GetObject("pbExcluirTodos.Image")));
+            this.pbExcluirTodos.Location = new System.Drawing.Point(3, 117);
+            this.pbExcluirTodos.Name = "pbExcluirTodos";
+            this.pbExcluirTodos.Size = new System.Drawing.Size(32, 32);
+            this.pbExcluirTodos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExcluirTodos.TabIndex = 7;
+            this.pbExcluirTodos.TabStop = false;
+            this.pbExcluirTodos.Click += new System.EventHandler(this.pbExcluirTodos_Click);
             // 
             // dgvRelacaoDeItens
             // 
+            this.dgvRelacaoDeItens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRelacaoDeItens.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRelacaoDeItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRelacaoDeItens.Location = new System.Drawing.Point(6, 73);
@@ -152,10 +153,10 @@
             this.Controls.SetChildIndex(this.lblTotalDaCompra, 0);
             this.Controls.SetChildIndex(this.txtTotal, 0);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdicionar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcluir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdicionarTodosAoCarrinho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExcluirTodos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelacaoDeItens)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,9 +169,9 @@
         private System.Windows.Forms.DataGridView dgvRelacaoDeItens;
         private System.Windows.Forms.Label lblTotalDaCompra;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbAdicionar;
+        private System.Windows.Forms.PictureBox pbExcluir;
+        private System.Windows.Forms.PictureBox pbAdicionarTodosAoCarrinho;
+        private System.Windows.Forms.PictureBox pbExcluirTodos;
     }
 }

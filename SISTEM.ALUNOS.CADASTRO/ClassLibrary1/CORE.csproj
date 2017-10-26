@@ -51,6 +51,7 @@
     <Compile Include="IEndereco.cs" />
     <Compile Include="IItemDePedido.cs" />
     <Compile Include="ItemDePedido.cs" />
+    <Compile Include="MapeadorDeItens.cs" />
     <Compile Include="MetodosDeExtensao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />

@@ -20,34 +20,38 @@ namespace CORUJA
             txtTotal.Text = _bs.ObtenhaTodos().Sum(c => c.Preco).ToString(CultureInfo.InvariantCulture);
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pbAdicionar_Click(object sender, EventArgs e)
         {
             var frm = new frmItemPedido();
             frm.ShowDialog();
-
             var item = frm.ObtenhaItemDePedido();
-
             if (item != null) _bs.Add(item);
-          
-
             AjustaTotal();
-           
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pbExcluir_Click(object sender, EventArgs e)
         {
             if (_bs.Current != null) _bs.RemoveCurrent();
             AjustaTotal();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pbExcluirTodos_Click(object sender, EventArgs e)
         {
             _bs.Clear();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pbAdicionarTodosAoCarrinho_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                var mapeadorDeItem = new MapeadorDeItens();
+                mapeadorDeItem.InserirItens(_bs.ObtenhaTodos());
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
         }
     }
 }

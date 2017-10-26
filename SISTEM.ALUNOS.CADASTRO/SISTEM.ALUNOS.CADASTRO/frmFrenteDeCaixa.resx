@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbAdicionar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKCAYAAAB7KRYFAAAABGdBTUEAALGPC/xhBQAADQxJREFUeF7t
         3U+opXUdx/H56zgqNKmQldRiICESQRCsICeSaSctNJRKhBYl0tq9Mm5040Jm4WYIgpjARTvXLoxo60Yi
@@ -179,7 +179,7 @@
         +G78e/w4rorN7e4U/gtx+lfzG/G5eDIeGX9lYAUHDvwfFOxicGSLRAoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKCAYAAAB7KRYFAAAABGdBTUEAALGPC/xhBQAABQVJREFUeF7t
         3b9rnWUcxuGk0dTSVioUrEOLLkU7KQVR0FUJ/gEODuJShK4uImRxdBBdBMVV3OygiP4DFRdxcJHiUByU
@@ -206,7 +206,7 @@
         AAAAAAAAAAAAAAAAYB9YWfkbTXgduMPNF00AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbAdicionarTodosAoCarrinho.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKCAYAAAB7KRYFAAAABGdBTUEAALGPC/xhBQAAF1BJREFUeF7t
         nXvIJcWVwH2MM+MZHzM+onF9z/qIj/UR4ztj1GRls6sm4hqXaGQ3YgxGVtFFZWWVFSWSEFFWlIVIMETE
@@ -311,7 +311,7 @@
         AAAAAAAAAAAAAAAAAAAA5MYWW/w/cAERiQjhZCYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbExcluirTodos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKCAYAAAB7KRYFAAAABGdBTUEAALGPC/xhBQAAH71JREFUeF7t
         nXnIJdWZh217s+22V83ErbW7Xdp9N23UmYzZSKvJzJCVySiBkAUNmUFDEuaPhARCJDLDDAZDQgZRWiQQ
