@@ -3,7 +3,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace CORE
 {
-    public class AlunoDal
+    public class MapeadorDeAluno
     {
         public object InsereAluno(Aluno aluno)
         {

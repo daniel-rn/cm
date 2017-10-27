@@ -38,33 +38,36 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(29, 53);
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.Location = new System.Drawing.Point(12, 49);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
+            this.lblDescricao.Size = new System.Drawing.Size(103, 24);
             this.lblDescricao.TabIndex = 0;
             this.lblDescricao.Text = "Descricao";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 74);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Preço";
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(90, 49);
+            this.txtDescricao.Location = new System.Drawing.Point(121, 51);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(163, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(86, 20);
             this.txtDescricao.TabIndex = 2;
             // 
             // btnIncluir
             // 
-            this.btnIncluir.Location = new System.Drawing.Point(90, 137);
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.Location = new System.Drawing.Point(121, 116);
             this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.Size = new System.Drawing.Size(86, 46);
             this.btnIncluir.TabIndex = 4;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
@@ -72,10 +75,10 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(90, 71);
-            this.txtPreco.Mask = "000,00";
+            this.txtPreco.Location = new System.Drawing.Point(121, 81);
+            this.txtPreco.Mask = "0000";
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(163, 20);
+            this.txtPreco.Size = new System.Drawing.Size(86, 20);
             this.txtPreco.TabIndex = 5;
             this.txtPreco.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPreco.ValidatingType = typeof(int);

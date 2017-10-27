@@ -6,7 +6,7 @@ namespace CORUJA
 {
     public partial class frmTelaCadastro : FormBase
     {
-        private AlunoDal _alunoDao;
+        private MapeadorDeAluno _alunoDao;
         private Aluno _aluno;
 
         public frmTelaCadastro():base("Cadastro de pessoas")
@@ -16,7 +16,7 @@ namespace CORUJA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _alunoDao = new AlunoDal();
+            _alunoDao = new MapeadorDeAluno();
             _aluno = new Aluno
             {
                 Nome = txtNome.Text,

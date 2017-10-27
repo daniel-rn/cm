@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using FirebirdSql.Data.FirebirdClient;
 
@@ -10,7 +11,7 @@ namespace CORE
         public MapeadorDeItens()
         {
         }
-        public bool InserirItens(List<ItemDePedido> itensDePedidos)
+        public static bool InserirItens(List<ItemDePedido> itensDePedidos)
         {
             try
             {
@@ -44,31 +45,36 @@ namespace CORE
             return "insert into TBPRODUTOS(Descricao, Preco) values(@descricao,@preco)";
         }
 
-        public void ObtenhaTodosItens()
+        public static List<ItemDePedido> ObtenhaTodosItens()
         {
-            var sql = "select * from TBPRODUTOS";
+            var lista = new List<ItemDePedido>();
+
+            var sql = ObtenhaSqlDeSelecao();
             Connection.Active(true);
 
-            var cmd = new FbCommand
-            {
-                CommandText = sql, 
-                Connection = Connection.FbCnn
-            };
+            var cmd = new FbCommand(sql,Connection.FbCnn);
 
-            var x = 0;
-
-            using(var dr = cmd.ExecuteReader())
+            using (var dr = cmd.ExecuteReader())
             {
-                while (dr.NextResult())
+                while (dr.Read())
                 {
-                    var des = dr.GetString('DESCRICAO');
-
-                    new ItemDePedido
-                    {
-                        Descricao = dr.GetString("TBPROCODIGO")
-                    };
+                    var unused = dr[0].ToString();
+                    lista.Add(Mapeie(dr));
                 }
             }
+
+            return lista;
         }
+
+        private static string ObtenhaSqlDeSelecao()
+        {
+            return "select * from TBPRODUTOS";
+        }
+
+        internal static ItemDePedido Mapeie(IDataRecord dr) => new ItemDePedido
+        {
+            Descricao = dr[1].ToString(),
+            Preco = Convert.ToDouble(dr[2].ToString())
+        };
     }
 }

@@ -21,7 +21,7 @@ namespace CORUJA
         {
             try
             {
-                var alunoLogin = new AlunoDal().SelectAluno(txtNome.Text, txtTelefone.Text);
+                var alunoLogin = new MapeadorDeAluno().SelectAluno(txtNome.Text, txtTelefone.Text);
 
                 if (!alunoLogin.Nome.Equals(txtNome.Text) || !alunoLogin.Telefone.Equals(txtTelefone.Text)) return;
                 new frmTelaCadastro().Show();

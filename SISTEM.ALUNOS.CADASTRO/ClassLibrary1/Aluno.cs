@@ -13,11 +13,11 @@ namespace CORE
         public string Email { get; set; }
         #endregion
 
-        public FbDataReader Open(FbConnection _conn)
+        public FbDataReader Open(FbConnection conn)
         {
             var cmd = new FbCommand
             {
-                Connection = _conn,
+                Connection = conn,
                 CommandText = Sql
             };
             return cmd.ExecuteReader();
