@@ -9,7 +9,7 @@ namespace CORUJA
     public partial class frmFrenteDeCaixa : FormBase
     {
         private readonly BindingSource _bs = new BindingSource();
-        public frmFrenteDeCaixa():base("Frente de Caixa")
+        public frmFrenteDeCaixa() : base("Frente de Caixa")
         {
             InitializeComponent();
             dgvRelacaoDeItens.DataSource = _bs;
@@ -25,33 +25,37 @@ namespace CORUJA
             var frm = new frmItemPedido();
             frm.ShowDialog();
             var item = frm.ObtenhaItemDePedido();
-            if (item != null) _bs.Add(item);
+            if (item == null) return;
+            _bs.Add(item);
             AjustaTotal();
         }
 
         private void pbExcluir_Click(object sender, EventArgs e)
         {
-            if (_bs.Current != null) _bs.RemoveCurrent();
+            if (_bs.Current == null) return;
+            _bs.RemoveCurrent();
             AjustaTotal();
         }
 
-        private void pbExcluirTodos_Click(object sender, EventArgs e)
-        {
-            _bs.Clear();
-        }
+        private void pbExcluirTodos_Click(object sender, EventArgs e) => _bs.Clear();
 
         private void pbAdicionarTodosAoCarrinho_Click(object sender, EventArgs e)
         {
             try
             {
-                var mapeadorDeItem = new MapeadorDeItens();
-                mapeadorDeItem.InserirItens(_bs.ObtenhaTodos());
+                MapeadorDeItens.InserirItens(_bs.ObtenhaTodos());
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
                 throw;
             }
+        }
+
+        private void frmFrenteDeCaixa_Load(object sender, EventArgs e)
+        {
+            var lista = MapeadorDeItens.ObtenhaTodosItens();
+            lista.ForEach(c => _bs.Add(c));
         }
     }
 }

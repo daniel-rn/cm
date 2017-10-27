@@ -17,7 +17,7 @@ namespace CORUJA
 
         private void AdicionaItem()
         {
-            if (string.IsNullOrEmpty(txtDescricao.Text) && string.IsNullOrEmpty(txtPreco.Text)) return;
+            if (string.IsNullOrWhiteSpace(txtDescricao.Text) && string.IsNullOrWhiteSpace(txtPreco.Text)) return;
             _itemDePedido = new ItemDePedido(txtDescricao.Text, Convert.ToDouble(txtPreco.Text));
         }
 

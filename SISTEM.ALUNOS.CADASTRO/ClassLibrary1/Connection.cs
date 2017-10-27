@@ -23,8 +23,8 @@ namespace CORE
         private static string ConfiguracoesBanco()
         {
             var configuracoesBanco = "User=SYSDBA;Password=masterkey";
-            //configuracoesBanco += ";Database = G:\\BANCOS\\CADASTRO.FDB";
-            configuracoesBanco += ";Database = C:\\WorkNascimento\\BaseDeDados\\CADASTRO.FDB";
+            configuracoesBanco += ";Database = C:\\WorkNascimento\\baseDeDados\\CADASTRO.FDB";
+            ////configuracoesBanco += ";Database = C:\\WorkNascimento\\BaseDeDados\\CADASTRO.FDB";
             configuracoesBanco += ";Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=0;";
             configuracoesBanco += "Connection timeout=7;Pooling=True;Packet Size=8192;Server Type=0";
             return configuracoesBanco;

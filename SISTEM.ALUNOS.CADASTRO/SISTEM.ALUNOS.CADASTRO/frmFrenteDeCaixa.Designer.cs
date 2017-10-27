@@ -148,6 +148,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFrenteDeCaixa";
             this.Text = "frmFrenteDeCaixa";
+            this.Load += new System.EventHandler(this.frmFrenteDeCaixa_Load);
             this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.dgvRelacaoDeItens, 0);
             this.Controls.SetChildIndex(this.lblTotalDaCompra, 0);

@@ -2,6 +2,10 @@
 {
     public class ItemDePedido : IItemDePedido
     {
+        public ItemDePedido()
+        {
+        }
+
         public ItemDePedido(string descricao, double preco)
         {
             Descricao = descricao;
