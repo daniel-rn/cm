@@ -8,9 +8,6 @@ namespace CORE.Mapeadores
 {
     public class MapeadorDeItens
     {
-        public MapeadorDeItens()
-        {
-        }
         public static bool InserirItens(List<ItemDePedido> itensDePedidos)
         {
             try
