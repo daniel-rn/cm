@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Aluno.cs" />
+    <Compile Include="Entidades\Item.cs" />
     <Compile Include="Mapeadores\MapeadorDeAluno.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Mapeadores\Connection.cs" />

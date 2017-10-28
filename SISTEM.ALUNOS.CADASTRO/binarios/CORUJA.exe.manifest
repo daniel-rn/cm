@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0kC0F0dddo1+1oQLMJcg5DgWXt7oMO38RoEv/kFe9mU=</dsig:DigestValue>
+        <dsig:DigestValue>yQDrJKuPg10blGJKZJPGV+0P7WbkYrXjMprUC/l/DRs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORUJA.exe" size="1435144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORUJA.exe" size="1436168">
       <assemblyIdentity name="CORUJA" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9UeQ7LS9TujYhtZVU0V1Mx5kMGml/9+m2v4d/ac7yeE=</dsig:DigestValue>
+        <dsig:DigestValue>cixx/wegu+MsJZhYrNjA/2BkAdZZrnR+8UiBw8uFhC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

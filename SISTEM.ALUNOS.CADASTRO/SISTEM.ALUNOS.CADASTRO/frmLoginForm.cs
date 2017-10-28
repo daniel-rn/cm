@@ -18,8 +18,9 @@ namespace CORUJA
                 var alunoLogin = new MapeadorDeAluno().ObtenhaAluno(txtNome.Text, txtTelefone.Text);
 
                 if (!alunoLogin.Nome.Equals(txtNome.Text) || !alunoLogin.Telefone.Equals(txtTelefone.Text)) return;
-                new frmTelaCadastro().Show();
-                new frmTelaExibeCadastros().Show();
+                //new frmTelaCadastro().Show();
+                //new frmTelaExibeCadastros().Show();
+                new frmPrincipal().Show();
                 Hide();
             }
             catch (Exception erro)
