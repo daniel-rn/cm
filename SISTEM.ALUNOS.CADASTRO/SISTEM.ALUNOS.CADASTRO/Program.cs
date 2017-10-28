@@ -8,7 +8,7 @@ namespace CORUJA
     internal static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
         private static void Main(string[] args)
@@ -34,7 +34,8 @@ namespace CORUJA
 
             if (!(ass.CreateInstance($"CORUJA.{idFormulario}") is Form frm))
             {
-                MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($@"Formulário não encontrado: {idFormulario}", @"Erro", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
             Application.Run(frm);

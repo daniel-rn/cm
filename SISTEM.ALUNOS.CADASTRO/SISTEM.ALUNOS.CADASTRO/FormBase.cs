@@ -31,7 +31,7 @@ namespace CORUJA
 
         private void FormBase_Load(object sender, EventArgs e)
         {
-            timer1_Tick(e,e);
+            timer1_Tick(e, e);
             lbNomeDaFuncao.Text = _nomeDaFuncao;
         }
     }

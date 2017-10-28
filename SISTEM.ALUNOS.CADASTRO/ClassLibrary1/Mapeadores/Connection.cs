@@ -1,6 +1,7 @@
-﻿using FirebirdSql.Data.FirebirdClient;
+﻿using System.Data.Common;
+using FirebirdSql.Data.FirebirdClient;
 
-namespace CORE
+namespace CORE.Mapeadores
 {
     public static class Connection
     {
@@ -34,6 +35,12 @@ namespace CORE
         {
             Active(true);
             return FbCnn.BeginTransaction();
+        }
+
+        public static DbCommand ObtehaComando(string sql)
+        {
+            Active(true);
+            return new FbCommand(sql,FbCnn);
         }
     }
 }

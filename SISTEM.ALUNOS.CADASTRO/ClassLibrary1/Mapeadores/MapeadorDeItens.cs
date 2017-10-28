@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
+using CORE.Entidades;
 using FirebirdSql.Data.FirebirdClient;
 
-namespace CORE
+namespace CORE.Mapeadores
 {
     public class MapeadorDeItens
     {
-        public MapeadorDeItens()
-        {
-        }
         public static bool InserirItens(List<ItemDePedido> itensDePedidos)
         {
             try

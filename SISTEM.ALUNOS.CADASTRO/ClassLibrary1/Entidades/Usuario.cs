@@ -1,4 +1,4 @@
-﻿namespace CORE
+﻿namespace CORE.Entidades
 {
     public abstract class Usuario
     {

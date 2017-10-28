@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>C:\Users\Daniel Nascimento\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,9 +22,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -54,20 +55,22 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DE8E934975203FB046EC30346B6E3AB0294D4785</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CORUJA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FirebirdSql.Data.FirebirdClient.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="frmItemPedido.Designer.cs">
       <DependentUpon>frmItemPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTesteDeObjetos.cs">
       <SubType>Form</SubType>
@@ -126,6 +135,9 @@
     <EmbeddedResource Include="frmItemPedido.resx">
       <DependentUpon>frmItemPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTesteDeObjetos.resx">
       <DependentUpon>frmTesteDeObjetos.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +160,7 @@
     <EmbeddedResource Include="frmTelaExibeCadastros.resx">
       <DependentUpon>frmTelaExibeCadastros.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CORUJA_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,11 +178,6 @@
     <ProjectReference Include="..\ClassLibrary1\CORE.csproj">
       <Project>{F380E878-D423-4921-9E65-1EB7BD32E27A}</Project>
       <Name>CORE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CONTROLES\CONTROLES.csproj">
-      <Project>{7741d685-067b-4060-b880-014898de0f02}</Project>
-      <Name>CONTROLES</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

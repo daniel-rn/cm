@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
 using CORE;
-
+using CORE.Mapeadores;
 
 namespace CORUJA
 {
     public partial class frmTelaExibeCadastros : FormBase
     {
-        private readonly Aluno _aluno = new Aluno();
-
         public frmTelaExibeCadastros() : base("Exibe Cadastros")
         {
             InitializeComponent();
@@ -18,15 +16,14 @@ namespace CORUJA
         {
             try
             {
-                var fbReader = _aluno.Open(Connection.FbCnn);
-                var bsAlunos = new BindingSource {DataSource = fbReader};
-                grid.DataSource = bsAlunos;
+                grid.DataSource = new BindingSource {DataSource = MapeadorDeAluno.ObtenhaTodosOsAlunos()};
             }
             catch (Exception erroException)
             {
                 MessageBox.Show(erroException.Message);
             }
         }
+
         private void TelaExibeCadastros_Load(object sender, EventArgs e)
         {
             AtualizaTable();

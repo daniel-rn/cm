@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using CORE.Entidades;
 
-namespace CORE
+namespace CORE.Extensao
 {
     public static class MetodosDeExtensao
     {
