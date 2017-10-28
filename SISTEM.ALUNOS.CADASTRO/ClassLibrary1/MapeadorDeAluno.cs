@@ -1,19 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using FirebirdSql.Data.FirebirdClient;
 
 namespace CORE
 {
     public class MapeadorDeAluno
     {
-        public object InsereAluno(Aluno aluno)
+        public static bool InsereAluno(Aluno aluno)
         {
             try
             {
-                Connection.Active(true);
-                var str = "insert into aluno(nome, telefone, email)" +
-                          $" values('{aluno.Nome}','{aluno.Telefone}','{aluno.Email}')";
-                var cmd = new FbCommand(str, Connection.FbCnn);
-                return cmd.ExecuteNonQuery();
+                using (var transaction = Connection.ObtenhaFbTransaction())
+                {
+                    var cmd = Connection.ObtehaComando(ObtenhaSqlDeInsercaoDeAluno(aluno));
+                    cmd.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                return true;
             }
             catch (Exception)
             {
@@ -22,7 +27,14 @@ namespace CORE
             }
 
         }
-        public object SelectAluno(Aluno aluno)
+
+        private static string ObtenhaSqlDeInsercaoDeAluno(Aluno aluno)
+        {
+            return "insert into aluno(nome, telefone, email)" +
+                                      $" values('{aluno.Nome}','{aluno.Telefone}','{aluno.Email}')";
+        }
+
+        public object ObtenhaAluno(Aluno aluno)
         {
             try
             {
@@ -32,7 +44,7 @@ namespace CORE
 
                 var cmd = new FbCommand(str, Connection.FbCnn);
 
-                return cmd.ExecuteNonQuery();
+                return cmd.ExecuteReader();
             }
             catch (Exception)
             {
@@ -41,24 +53,21 @@ namespace CORE
             }
 
         }
-        public Aluno SelectAluno(string nome, string telefone)
+        public Aluno ObtenhaAluno(string nome, string telefone)
         {
             try
             {
                 var alunoSelecionado = new Aluno();
-                Connection.Active(true);
 
-                var str = "select * from aluno " + $"where nome = '{nome}' and telefone = '{telefone}'";
+                var cmd = Connection.ObtehaComando(ObtenhaSqlDeConsultaDeAluno(nome,telefone));
 
-                var cmd = new FbCommand(str, Connection.FbCnn);
-
-                var dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
+                using (var dataReader = cmd.ExecuteReader())
                 {
-                    var unused = dataReader[0].ToString();
-                    alunoSelecionado.Nome = dataReader[1].ToString();
-                    alunoSelecionado.Telefone = dataReader[2].ToString();
-                    alunoSelecionado.Email = dataReader[3].ToString();
+                    while (dataReader.Read())
+                    {
+                        var unused = dataReader[0].ToString();
+                        alunoSelecionado = MapeieAluno(dataReader);
+                    }
                 }
 
                 return alunoSelecionado;
@@ -70,6 +79,45 @@ namespace CORE
             }
 
         }
+        public static IEnumerable<dynamic> ObtenhaTodosOsAlunos()
+        {
+            try
+            {
+                var listaDeAlunos = new List<dynamic>();
 
+                var cmd = Connection.ObtehaComando(ObtenhaSqlDeConsultaDeTodosOsAlunos());
+
+                using (var dataReader = cmd.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        listaDeAlunos.Add(MapeieAluno(dataReader));
+                    }
+                }
+
+                return listaDeAlunos;
+            }
+            catch (Exception)
+            {
+                Connection.Active(false);
+                throw;
+            }
+
+        }
+
+        private static string ObtenhaSqlDeConsultaDeTodosOsAlunos() => "select * from aluno";
+
+        private static string ObtenhaSqlDeConsultaDeAluno(string nome, string telefone)
+        {
+            return "select * from aluno " + $"where nome = '{nome}' and telefone = '{telefone}'";
+        }
+
+        private static Aluno MapeieAluno(IDataRecord dataReader) => new Aluno
+        {
+            Id = Convert.ToInt16(dataReader[0].ToString()),
+            Nome = dataReader[1].ToString(),
+            Telefone = dataReader[2].ToString(),
+            Email = dataReader[3].ToString()
+        };
     }
 }

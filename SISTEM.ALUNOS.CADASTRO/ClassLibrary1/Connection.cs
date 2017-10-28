@@ -1,4 +1,6 @@
-﻿using FirebirdSql.Data.FirebirdClient;
+﻿using System.Data.Common;
+using System.Runtime.CompilerServices;
+using FirebirdSql.Data.FirebirdClient;
 
 namespace CORE
 {
@@ -34,6 +36,12 @@ namespace CORE
         {
             Active(true);
             return FbCnn.BeginTransaction();
+        }
+
+        public static DbCommand ObtehaComando(string sql)
+        {
+            Active(true);
+            return new FbCommand(sql,FbCnn);
         }
     }
 }

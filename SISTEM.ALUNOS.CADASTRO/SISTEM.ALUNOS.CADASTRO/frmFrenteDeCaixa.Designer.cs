@@ -121,7 +121,7 @@
             // 
             this.lblTotalDaCompra.AutoSize = true;
             this.lblTotalDaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDaCompra.Location = new System.Drawing.Point(20, 387);
+            this.lblTotalDaCompra.Location = new System.Drawing.Point(582, 313);
             this.lblTotalDaCompra.Name = "lblTotalDaCompra";
             this.lblTotalDaCompra.Size = new System.Drawing.Size(75, 31);
             this.lblTotalDaCompra.TabIndex = 5;
@@ -130,7 +130,7 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(101, 387);
+            this.txtTotal.Location = new System.Drawing.Point(663, 313);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(75, 31);

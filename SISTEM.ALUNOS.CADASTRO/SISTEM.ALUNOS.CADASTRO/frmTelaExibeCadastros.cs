@@ -9,27 +9,19 @@ namespace CORUJA
     {
         private readonly Aluno _aluno = new Aluno();
 
-        public frmTelaExibeCadastros() : base("Exibe Cadastros")
-        {
-            InitializeComponent();
-        }
+        public frmTelaExibeCadastros() : base("Exibe Cadastros") => InitializeComponent();
 
         private void AtualizaTable()
         {
             try
             {
-                var fbReader = _aluno.Open(Connection.FbCnn);
-                var bsAlunos = new BindingSource {DataSource = fbReader};
-                grid.DataSource = bsAlunos;
+                grid.DataSource = new BindingSource {DataSource = MapeadorDeAluno.ObtenhaTodosOsAlunos()};
             }
             catch (Exception erroException)
             {
                 MessageBox.Show(erroException.Message);
             }
         }
-        private void TelaExibeCadastros_Load(object sender, EventArgs e)
-        {
-            AtualizaTable();
-        }
+        private void TelaExibeCadastros_Load(object sender, EventArgs e) => AtualizaTable();
     }
 }
