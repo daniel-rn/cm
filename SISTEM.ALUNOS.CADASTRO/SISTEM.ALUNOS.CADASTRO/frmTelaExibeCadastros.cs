@@ -2,14 +2,14 @@
 using System.Windows.Forms;
 using CORE;
 
-
 namespace CORUJA
 {
     public partial class frmTelaExibeCadastros : FormBase
     {
-        private readonly Aluno _aluno = new Aluno();
-
-        public frmTelaExibeCadastros() : base("Exibe Cadastros") => InitializeComponent();
+        public frmTelaExibeCadastros() : base("Exibe Cadastros")
+        {
+            InitializeComponent();
+        }
 
         private void AtualizaTable()
         {
@@ -22,6 +22,10 @@ namespace CORUJA
                 MessageBox.Show(erroException.Message);
             }
         }
-        private void TelaExibeCadastros_Load(object sender, EventArgs e) => AtualizaTable();
+
+        private void TelaExibeCadastros_Load(object sender, EventArgs e)
+        {
+            AtualizaTable();
+        }
     }
 }

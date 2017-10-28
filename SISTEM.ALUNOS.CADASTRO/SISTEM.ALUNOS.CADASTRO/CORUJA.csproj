@@ -55,22 +55,10 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FirebirdSql.Data.FirebirdClient.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmFrenteDeCaixa.cs">
@@ -165,11 +153,6 @@
     <ProjectReference Include="..\ClassLibrary1\CORE.csproj">
       <Project>{F380E878-D423-4921-9E65-1EB7BD32E27A}</Project>
       <Name>CORE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CONTROLES\CONTROLES.csproj">
-      <Project>{7741d685-067b-4060-b880-014898de0f02}</Project>
-      <Name>CONTROLES</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

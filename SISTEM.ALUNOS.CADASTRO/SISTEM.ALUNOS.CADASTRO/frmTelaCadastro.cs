@@ -6,7 +6,10 @@ namespace CORUJA
 {
     public partial class frmTelaCadastro : FormBase
     {
-        public frmTelaCadastro():base("Cadastro de pessoas") => InitializeComponent();
+        public frmTelaCadastro() : base("Cadastro de pessoas")
+        {
+            InitializeComponent();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -23,9 +26,8 @@ namespace CORUJA
             }
             catch (Exception erro)
             {
-                MessageBox.Show(@"Erro ao inserir o registro !!!",erro.Message);
+                MessageBox.Show(@"Erro ao inserir o registro !!!", erro.Message);
             }
-
         }
 
         private void LimpaCampos()

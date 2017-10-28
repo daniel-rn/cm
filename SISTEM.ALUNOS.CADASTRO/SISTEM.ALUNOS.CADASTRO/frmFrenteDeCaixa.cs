@@ -9,6 +9,7 @@ namespace CORUJA
     public partial class frmFrenteDeCaixa : FormBase
     {
         private readonly BindingSource _bs = new BindingSource();
+
         public frmFrenteDeCaixa() : base("Frente de Caixa")
         {
             InitializeComponent();
@@ -37,7 +38,10 @@ namespace CORUJA
             AjustaTotal();
         }
 
-        private void pbExcluirTodos_Click(object sender, EventArgs e) => _bs.Clear();
+        private void pbExcluirTodos_Click(object sender, EventArgs e)
+        {
+            _bs.Clear();
+        }
 
         private void pbAdicionarTodosAoCarrinho_Click(object sender, EventArgs e)
         {
