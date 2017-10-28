@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
+using CORE.Entidades;
 using FirebirdSql.Data.FirebirdClient;
 
-namespace CORE
+namespace CORE.Mapeadores
 {
     public class MapeadorDeAluno
     {

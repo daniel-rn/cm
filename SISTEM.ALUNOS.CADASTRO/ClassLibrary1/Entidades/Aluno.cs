@@ -1,6 +1,4 @@
-﻿using FirebirdSql.Data.FirebirdClient;
-
-namespace CORE
+﻿namespace CORE.Entidades
 {
     public class Aluno 
     {

@@ -1,7 +1,7 @@
 ﻿using System.Data.Common;
 using FirebirdSql.Data.FirebirdClient;
 
-namespace CORE
+namespace CORE.Mapeadores
 {
     public static class Connection
     {

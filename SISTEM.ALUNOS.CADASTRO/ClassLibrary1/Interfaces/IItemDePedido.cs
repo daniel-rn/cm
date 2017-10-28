@@ -1,4 +1,4 @@
-﻿namespace CORE
+﻿namespace CORE.Interfaces
 {
     public interface IItemDePedido
     {

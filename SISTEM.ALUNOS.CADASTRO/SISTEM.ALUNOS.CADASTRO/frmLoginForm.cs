@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using CORE;
+using CORE.Mapeadores;
 
 namespace CORUJA
 {

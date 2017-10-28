@@ -1,4 +1,6 @@
-﻿namespace CORE
+﻿using CORE.Interfaces;
+
+namespace CORE.Entidades
 {
     public class Endereco: IEndereco
     {
