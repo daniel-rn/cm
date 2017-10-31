@@ -43,26 +43,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORE.dll" size="12288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CONTROLES.dll" size="15872">
+      <assemblyIdentity name="CONTROLES" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DH2FjWKQiu5oOTPpZKhIc+cH/b5zrk7zAjJBIyVZZEU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORE.dll" size="12800">
       <assemblyIdentity name="CORE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yQDrJKuPg10blGJKZJPGV+0P7WbkYrXjMprUC/l/DRs=</dsig:DigestValue>
+        <dsig:DigestValue>hiSUvz8rjkvRoMwOWKVAcXGbIXibL8k1uf3Y83ocPLM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORUJA.exe" size="1436168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CORUJA.exe" size="1438728">
       <assemblyIdentity name="CORUJA" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cixx/wegu+MsJZhYrNjA/2BkAdZZrnR+8UiBw8uFhC4=</dsig:DigestValue>
+        <dsig:DigestValue>TVzsIwjZoKHq+CiKh35bKkoUZxdPVC/QXjW351Gj7Ak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
