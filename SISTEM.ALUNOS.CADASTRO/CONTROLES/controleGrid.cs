@@ -5,9 +5,8 @@ namespace CONTROLES
     public partial class ControleGrid : UserControl
     {
         private BindingSource _bs;
-        public ControleGrid(BindingSource bs)
+        public ControleGrid()
         {
-            _bs = bs;
             InitializeComponent();
         }
     }
