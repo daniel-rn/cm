@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using CORE;
 using CORE.Extensao;
 using CORE.Mapeadores;
 
