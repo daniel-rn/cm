@@ -1,4 +1,5 @@
-﻿using CORE.Entidades;
+﻿using System;
+using CORE.Entidades;
 
 namespace CORUJA
 {
@@ -8,13 +9,25 @@ namespace CORUJA
         public frmEstoqueAterrissagem():base("Controle de Estoque")
         {
             InitializeComponent();
-            controleGrid.InicializaGrid();
-            controleGrid.AddColumn("Id", nameof(Item.Id), 160);
-            controleGrid.AddColumn("Descricão", nameof(Item.Descricao), 160);
-            controleGrid.AddColumn("Quantidade", nameof(Item.Quantidade), 136);
-            controleGrid.AddColumn("Quantidade Minima", nameof(Item.QuantidadeMinimaEmEstoque), 136);
-
             controleGrid.AdicionaItemNaGridDelegate = AdicionaItemNaGrid;
+            controleDeBotoesPadroes1.AoClicarNoBotaoEmitir = AoClicarNoBotaoEmitir;
+            controleDeBotoesPadroes1.AoClicarNoBotaoSalvar = AoClicarNoBotaoSalvar;
+            controleDeBotoesPadroes1.AoClicarNoBotaoFechar = AoClicarNoBotaoFechar;
+        }
+
+        private dynamic AoClicarNoBotaoFechar()
+        {
+            return this;
+        }
+
+        private dynamic AoClicarNoBotaoSalvar()
+        {
+            return "Clicou no Botao Salvar";
+        }
+
+        public object AoClicarNoBotaoEmitir()
+        {
+            return "Clicou no Botao Emitir";
         }
 
         public dynamic AdicionaItemNaGrid()

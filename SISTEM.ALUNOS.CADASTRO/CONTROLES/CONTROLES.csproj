@@ -34,10 +34,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControleDeBotoesPadroes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleDeBotoesPadroes.Designer.cs">
+      <DependentUpon>ControleDeBotoesPadroes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControleDeFiltroDePesquisa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,6 +66,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ControleDeBotoesPadroes.resx">
+      <DependentUpon>ControleDeBotoesPadroes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControleDeFiltroDePesquisa.resx">
       <DependentUpon>ControleDeFiltroDePesquisa.cs</DependentUpon>
     </EmbeddedResource>
