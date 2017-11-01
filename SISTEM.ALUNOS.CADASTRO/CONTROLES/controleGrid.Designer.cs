@@ -41,10 +41,15 @@
             // 
             // dgvControle
             // 
+            this.dgvControle.AllowUserToOrderColumns = true;
+            this.dgvControle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvControle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvControle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControle.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvControle.Location = new System.Drawing.Point(0, 0);
             this.dgvControle.Name = "dgvControle";
+            this.dgvControle.RowHeadersVisible = false;
             this.dgvControle.Size = new System.Drawing.Size(367, 300);
             this.dgvControle.TabIndex = 1;
             // 
@@ -67,6 +72,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -95,10 +101,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvControle;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dgvControle;
     }
 }

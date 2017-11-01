@@ -31,12 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControleDeBotoesPadroes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControleDeBotoesPadroes.Designer.cs">
+      <DependentUpon>ControleDeBotoesPadroes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControleDeFiltroDePesquisa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,6 +66,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ControleDeBotoesPadroes.resx">
+      <DependentUpon>ControleDeBotoesPadroes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControleDeFiltroDePesquisa.resx">
       <DependentUpon>ControleDeFiltroDePesquisa.cs</DependentUpon>
     </EmbeddedResource>
@@ -70,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\ControleGrid.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\CORE.csproj">
+      <Project>{F380E878-D423-4921-9E65-1EB7BD32E27A}</Project>
+      <Name>CORE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
